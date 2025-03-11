@@ -1,0 +1,23 @@
+int compare(const void* a, const void* b) {
+    return (*(int**)a)[1] - (*(int**)b)[1]; 
+}
+
+int maxEvents(int** events, int eventsSize, int* eventsColSize) {
+    qsort(events, eventsSize, sizeof(events[0]), compare);
+
+    int attended = 0;
+    int* days = (int*)calloc(100001, sizeof(int)); 
+
+    for (int i = 0; i < eventsSize; i++) {
+        for (int j = events[i][0]; j <= events[i][1]; j++) {  
+            if (days[j] == 0) {  
+                days[j] = 1;
+                attended++;
+                break;
+            }
+        }
+    }
+
+    free(days);
+    return attended;
+}
