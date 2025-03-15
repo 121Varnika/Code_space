@@ -1,0 +1,60 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main() {
+    char player1[50], player2[50];
+    int numbers[5], i = 0, num, used[11] = {0};
+    int guess1, guess2, s1 = 0, s2 = 0;
+
+    printf("Enter player1 name: ");
+    scanf("%s", player1);
+    
+    printf("Enter player2 name: ");
+    scanf("%s", player2);
+
+    srand(time(NULL));
+
+    while (i < 5) {
+        num = (rand() % 10) + 1; 
+        
+        if (used[num] == 0) {  
+            numbers[i] = num;
+            used[num] = 1;
+            i++;  
+        }
+    }
+
+    for (i = 0; i < 3; i++) {
+        printf("\n%s, enter your choice: ", player1);
+        scanf("%d", &guess1);
+
+        for (int q = 0; q < 5; q++) {
+            if (guess1 == numbers[q]) {
+                s1++;
+                break;
+            }
+        }
+    }
+
+    for (i = 0; i < 3; i++) {
+        printf("\n%s, enter your choice: ", player2);
+        scanf("%d", &guess2);
+
+        for (int q = 0; q < 5; q++) {
+            if (guess2 == numbers[q]) {
+                s2++;
+            }
+        }
+    }
+    
+    printf("\nGenerated unique numbers: ");
+    for (i = 0; i < 5; i++) {
+        printf("%d ", numbers[i]);
+    }
+
+    printf("\n\n%s's score: %d\n", player1, s1);
+    printf("%s's score: %d\n", player2, s2);
+
+    return 0;
+}
