@@ -1,0 +1,18 @@
+class Main{
+    public static void main(String[] args){
+        Secret one=new Secret();
+        one.display();
+        one.update(234);
+        one.display();
+        
+    }
+}
+class Secret{
+    private int secret=1234;
+    void display(){
+        System.out.println(this.secret);
+    }
+     void update(int newSecret) {
+        this.secret = newSecret;
+    }
+}
