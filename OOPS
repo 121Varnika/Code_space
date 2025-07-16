@@ -1,0 +1,42 @@
+//OOPS
+class Main{
+    public static void main(String[] args){
+        Dog tommy=new Dog();
+        tommy.food();
+        tommy.color();
+        tommy.temper();
+        tommy.type();
+    }
+}
+//inherit with condition using abstract(idea)
+abstract class Animal{
+    abstract void color();//condition
+    void sound(){
+        System.out.println("All animals make sound");
+    }
+    void food(){
+        System.out.println("All animals eat");
+    }
+}
+class Dog extends Animal implements characteristics, breed{
+    void sound(){
+        System.out.println("Dogs bark");
+    }
+    void color(){
+        System.out.println("black and white");
+    }
+    void temper(){
+        System.out.println("Dogs are amiable");
+    }
+}
+//even without obj interface lets you use so give static 
+interface characteristics{
+    void temper(){
+        System.out.println("Soft");
+    }
+}
+interface breed{
+    void type(){
+        System.out.println("Pomerian");
+    }
+}
