@@ -1,0 +1,30 @@
+//to make variable private
+class Main{
+    public static void main(String[] args){
+        Account arun=new Account();
+        Account anu=new Account();
+        arun.display();
+        arun.deposit(10000);
+        arun.withdraw(1000);
+    }
+}
+//encapsulation
+class Account{
+    private int balance=0;
+    void display(){
+        System.out.println("Available balance is: " +balance);
+    }
+    void deposit(int amount){
+        balance+=amount;
+        System.out.println(amount+" deposited successfully and the balance is "+balance);
+    }
+    void withdraw(int amount){
+        if(balance>=amount){
+            balance-=amount;
+            System.out.println("available: "+balance);
+        }else{
+            System.out.println("insufficient balance");
+        }
+    }
+}
+
