@@ -1,0 +1,39 @@
+class Main{
+    public static void main(String[] args){
+      AnnaNagar sriram=new AnnaNagar();
+      sriram.places();
+    }
+}
+abstract class Chennai{
+    abstract void traffic();
+    void weather(){
+        System.out.println("weather is as moody as a teenager");
+    }
+    void population(){
+        System.out.println("Densely populated");
+    }
+    void col(){
+        System.out.println("cheaper comparitively");
+    }
+}
+class AnnaNagar extends Chennai implements Urban,Tourism{
+    public void skyscrappers(){//for methods from interface it should be declared as public
+        System.out.println("tall buildings");
+    }
+    void traffic(){
+        System.out.println("has peak traffic");
+    }
+    public void places(){
+        System.out.println("beaches");
+    }
+    void col(){
+        System.out.println("higher comparitively");
+}
+
+}
+interface Urban{
+    void skyscrappers();//default abstract method
+}
+interface Tourism{
+    void places();
+}    //to inherit multiple classes put interface and for the methods of interface put public 
