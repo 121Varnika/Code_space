@@ -1,0 +1,17 @@
+//exception handling- error is handled and everything else is printed
+class Main{
+    public static void main(String[] args){
+        try{
+        int dividend=24;
+        int divisor=0;
+        System.out.println(dividend/divisor);
+        }
+        catch(ArithmeticException div) {
+            System.out.println("error");
+        }
+        finally{
+            
+        System.out.println("Thank you for using this program");
+    }
+}
+}
