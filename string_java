@@ -1,0 +1,18 @@
+class Main{
+    public static void main(String[] args){
+        String str="hElLo WoRLd";
+        System.out.println(str.length());//length is a function
+        System.out.println(str.charAt(5));//to pull specific character
+        for(int i=0;i<str.length();i++){ //for loop to print char
+            System.out.println(str.charAt(i));
+        }
+        System.out.println(str.substring(1));//5 is excluded,string without for loop
+        System.out.println(str.toUpperCase());
+        str=str.toUpperCase();//to convert to uppercase
+        System.out.println(str);
+        char []str1=str.toCharArray();
+        System.out.println(str1[5]);
+        str=str.toLowerCase();
+        System.out.println(Character.toUpperCase(str.charAt(0)+str.substring(1)));
+    }
+}
