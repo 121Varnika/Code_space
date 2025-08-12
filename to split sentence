@@ -1,0 +1,7 @@
+class Main {
+    public static void main(String[] args) {
+        String input="Welcome to the class";
+        String[] stringArray=input.split(" ");
+        System.out.print(stringArray[1]);
+    }
+}
