@@ -1,0 +1,8 @@
+class Main {
+    public static void main(String[] args) {
+        String num="10,20,30";
+        String[] numArray=num.split(",");
+        int part1=Integer.parseInt(numArray[1]);
+        System.out.print(numArray[1]);
+    }
+}
