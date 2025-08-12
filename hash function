@@ -1,0 +1,9 @@
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        Stack<Integer> bharat=new Stack<>();
+        HashMap<String,Integer> sr=new HashMap<>();
+        sr.put("Bharat",54);
+        System.out.print(sr.get("Bharat"));
+    }
+}
